@@ -8,14 +8,162 @@
 	<meta name="author" content="Your name goes here">
 
 	<!-- tab title -->
-	<title>[Enter page title here]</title>
+	<link rel="shortcut icon" href="images/favicon.png" type="images/HP">
+	<title>Hogwarts School of Witchcraft &amp; Wizardry</title>
 
 
 	<!-- Style Tags containing all the CSS for this page -->
 	<style>
 		/* Add the necessary CSS here between the style tags */
-		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 
+		.clearfix::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+
+		html {
+			background-color: darkslategrey;
+		}
+
+		body {
+			font-family: sans-serif;
+			font-size: 100%;
+			color: white;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		header {
+			display: flex;
+			align-items: center;
+		}
+
+		header img {
+			max-width: 150px;
+			margin: 1em;
+		}
+
+		header h2 {
+			font-size: 250%;
+		}
+
+		header h3 {
+			font-size: 200%;
+		}
+
+		#nav_menu {
+			background-color: darkslateblue;
+		}
+
+		#nav_menu ul {
+			list-style-type: none;
+			display: flex;
+			border-top: 3px ridge greenyellow;
+			border-bottom: 3px ridge greenyellow
+		}
+
+		#nav_menu li {
+			width: 20%;
+		}
+
+		#nav_menu a {
+			display: block;
+			text-align: center;
+			padding: .75em 0;
+			text-decoration: none;
+			color: cyan;
+			font-size: 110%;
+			font-weight: bold;
+			font-variant: small-caps;
+			transition: all ease-in-out 300ms;
+		}
+
+		#nav_menu a:hover {
+			color: black;
+			background-color: lightblue;
+		}
+
+		#motto {
+			font-size: 250%;
+			color: greenyellow;
+			margin-top: .25em;
+			text-align: center;
+			font-variant: small-caps;
+		}
+
+		#mottodesc {
+			width: 70%;
+			margin: 0 auto;
+			font-style: italic;
+		}
+
+		section {
+			width: 80%;
+
+		}
+
+		section img {
+			max-width: 300px;
+			float: left;
+			border: 3px ridge green;
+			border-radius: 15px;
+			margin: 1em;
+		}
+
+		main {
+			display: flex;
+			gap: 1.5em;
+		}
+
+		main p {
+			margin: 1em;
+		}
+
+		aside h3 {
+			text-align: center;
+			margin-bottom: .25em;
+		}
+
+		aside ul {
+			width: 100%;
+			background-color: brown;
+			list-style-type: none;
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+			padding: 1em;
+			border-radius: 15px;
+		}
+
+		aside a {
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			color: whitesmoke;
+			font-weight: bold;
+		}
+
+		aside a:hover {
+			color: greenyellow;
+		}
+
+		footer {
+			border-top: 3px ridge greenyellow;
+		}
+
+		footer p {
+			text-align: center;
+			padding: 2em 0;
+			font-size: 85%;
+			font-variant: small-caps;
+			font-weight: bold;
+		}
 
 	</style>
 
@@ -24,7 +172,12 @@
 <body>
 
 	<header>
+		<a href="index.html"><img src="images/hogwartslogo.png" alt="Hogwarts Logo"
+				title="Click here to return to home"></a>
+		<div>
 		<h2>Hogwarts School of HTML5 and CSS3</h2>
+		<h3>Putting the magic into webdev</h3>
+		</div>
 	</header>
 
 	<nav id="nav_menu">
@@ -37,13 +190,13 @@
 		</ul>
 	</nav>
 
-	<h1>Draco Dormiens Nunquam Titillandus</h1>
-	<h3>-The motto of Hogwarts School of Witchcraft and Wizardry. Translated from Latin, it means “Never Tickle a Sleeping Dragon.”</h3>
+	<h1 id="motto">Draco Dormiens Nunquam Titillandus</h1>
+	<h3 id="mottodesc">-The motto of Hogwarts School of Witchcraft and Wizardry. Translated from Latin, it means “Never Tickle a Sleeping Dragon.”</h3>
 
 
 	<main>
 
-		<section>
+		<section class="clearfix">
 			<img src="images/hogwarts.jpg">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper lacinia velit at finibus. Quisque felis dolor, placerat at tempus ut, mollis a tellus. Aenean tortor enim, dictum sed felis a, molestie euismod enim. Vestibulum fermentum mi quis ante pulvinar, at eleifend ipsum cursus. Nunc ultricies convallis porta. In non convallis augue. Mauris luctus gravida ipsum, vel dictum magna rutrum eu. Nulla facilisi. Morbi lobortis enim vitae lectus pulvinar, at hendrerit eros porttitor.</p>
 			<p>Donec vulputate facilisis dignissim. Nulla dapibus nisi urna, ac accumsan magna bibendum in. Sed tincidunt, nulla quis finibus efficitur, justo libero consequat orci, eget porta augue ex eu magna. Nullam vestibulum, nisi ac tempor varius, est velit efficitur lectus, non aliquam turpis felis a sem. Nam cursus dolor non mauris tincidunt blandit eu at mi. Sed dapibus pulvinar nisi a posuere. Nulla pulvinar aliquam suscipit. Duis metus nibh, ultrices at odio sed, interdum fringilla libero. Phasellus viverra, augue ornare consequat semper, erat turpis viverra justo, in porttitor erat diam nec arcu. Duis tempor, lacus sed porttitor rutrum, ligula est feugiat lacus, efficitur blandit nibh enim vitae dui. Maecenas euismod nisi ac orci semper aliquam.</p>
@@ -69,8 +222,13 @@
 	</main>
 
 	<footer>
-		<p>&copy; <span></span> [your-name-here] Productions</p>
+		<p>&copy; <span id="copyrightyear"></span> Lucci Productions</p>
 	</footer>
 
 </body>
 </html>
+
+<script>
+   const d = new Date();
+   document.getElementById('copyrightyear').innerHTML = d.getFullYear();
+</script>
